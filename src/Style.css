@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+  --primary-color: #4CAF50; /* Green */
+  --secondary-color: #FF5722; /* Orange */
+  --background-color: #F5F5F5; /* Light Grey */
+  --text-color: #212121; /* Dark Grey */
+  --border-color: #BDBDBD; /* Grey */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+/* AddTransaction Component Styles */
+#form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    width: calc(50% - 5px);
+  }
+  
+  .form-control label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-control input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    text-align: center; /* Center text input */
+  }
+  
+  .btn {
+    width: calc(100% - 16px); /* Adjusting width for button */
+    padding: 12px; /* Increased padding for button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: var(--primary-color); /* Button color green */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .btn:hover {
+    opacity: 0.8;
+  }
+  
+  .design {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%; /* Make the design div full width */
+    max-width: 400px; /* Limiting maximum width */
+    box-sizing: border-box; /* Including padding and border in width calculation */
+    text-align: center; /* Center text */
+  }
+  .form-controll input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    text-align: center; /* Center text input */
+  }
+ /* Search bar and button styles */
+/* Search bar and button styles */
+.search-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center; /* Center align the items horizontally */
+    align-items: center; /* Center align the items vertically */
+    text-align: center; /* Center align the text inside */
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    margin-right: 10px; /* Add some space between input and button */
+}
+
+.search-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #388e3c;
+}
+
+/* List styles */
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column; /* Display list items vertically */
+    align-items: center; /* Center align list items horizontally */
+}
+
+.list li {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%; /* Limit the width of list items */
+    max-width: 400px; /* Limit the maximum width of list items */
+}
+
+.list li.highlighted {
+    background-color: yellow; /* Highlight color for search results */
+}
+
+.list li.plus {
+    border-right: 5px solid var(--primary-color);
+}
+
+.list li.minus {
+    border-right: 5px solid var(--secondary-color);
+}
+
+.delete-btn {
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+    opacity: 1;
+}
+
+h3 {
+    text-align: center; /* Center align the text */
+}
+
+h4 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.inc-exp-container {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    display: flex;
+    justify-content: space-around; /* Change from space-between to space-around */
+    align-items: center; /* Vertically center align items */
+    margin: 20px auto; /* Center the container */
+    max-width: 400px; /* Limit the maximum width */
+}
+
+.inc-exp-container > div {
+    flex: 1;
+    text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+    border-right: 1px solid var(--border-color);
+}
+
+.money {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 5px 0;
+}
+
+.money.plus {
+    color: var(--primary-color);
+}
+
+.money.minus {
+    color: var(--secondary-color);
+}
+
+label {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+/* .tracker-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+.balance-container {
+    text-align: center; /* Center align the content */
+    margin-top: 20px; /* Add some space above the balance section */
+    padding: 20px; /* Add padding to create space around the content */
+    background-color: #f5f5f5; /* Set background color */
+    border-radius: 8px; /* Add rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.balance-container:hover {
+    background-color: #e0e0e0; /* Change background color on hover */
+}
+
+.balance-container h4 {
+    margin-bottom: 10px; /* Add some space below the heading */
+}
+
+.balance-container h1 {
+    font-size: 36px; /* Increase the font size of the balance amount */
+    color: var(--primary-color); /* Change the text color to the primary color */
+}
+.tracker-container {
+    text-align: center; /* Center align the text */
+    font-size: 24px; /* Increase the font size */
+    margin-top: 20px; /* Add some space above the heading */
+}
+
